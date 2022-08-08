@@ -17,10 +17,11 @@ lr = 0.01
 var =3
 dfx = dexpr.evalf(subs = {x : 3})
 diff = var - lr*dfx
-while(diff>0.0000001):
+difference = abs(var- diff)
+while(difference>0.2):
     var = diff
-    print(diff)
-    diff = diff = var - lr*dfx
-
+    diff = var - lr*dfx
+    difference = abs(var- diff)
+    print(difference)
 print(var)
 print(diff)
